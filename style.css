@@ -1,0 +1,138 @@
+body {
+  background: #000;
+  margin: 0;
+  font-family: sans-serif;
+}
+body > div {
+  border-radius: 50%;
+  box-shadow: inset 0 0 70px black;
+  background: radial-gradient(#001a21, #001a21, #001a21, #000);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: block;
+  border: 10px solid #c20000;
+}
+body > div > * {
+  position: absolute;
+  display: block;
+}
+body > div .numbers {
+  color: #fff;
+  padding: 10px;
+  font-size: 150%;
+}
+body > div .numbers:nth-child(1) {
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+}
+body > div .numbers:nth-child(2) {
+  transform: translateY(-50%);
+  right: 0;
+  top: 50%;
+}
+body > div .numbers:nth-child(3) {
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+}
+body > div .numbers:nth-child(4) {
+  transform: translateY(-50%);
+  left: 0;
+  top: 50%;
+}
+body > div .rec {
+  height: 3px;
+  width: calc(100% - 30px);
+  border: solid rgba(255, 255, 255, 0.404);
+  border-width: 0 15px 0 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body > div .rec:nth-child(5) {
+  transform: rotate(30deg);
+}
+body > div .rec:nth-child(6) {
+  transform: rotate(60deg);
+}
+body > div .rec:nth-child(7) {
+  transform: rotate(120deg);
+}
+body > div .rec:nth-child(8) {
+  transform: rotate(150deg);
+}
+body > div #bullet {
+  width: 30px;
+  height: 30px;
+  background: white;
+  box-shadow: 0 0 22px 15px rgba(0, 0, 0, 0.26);
+  display: block;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+body > div #hour {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  animation: rotate 216000s linear infinite;
+  display: flex;
+  justify-content: center;
+}
+body > div #hour span {
+  background-color: red;
+  height: 30%;
+  width: 15px;
+  display: block;
+  border-radius: 10px;
+  margin-top: 65px;
+}
+body > div #minute {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  animation: rotate 3600s linear infinite;
+  display: flex;
+  justify-content: center;
+}
+body > div #minute span {
+  background-color: white;
+  height: 40%;
+  width: 5px;
+  display: block;
+  border-radius: 10px;
+  margin-top: 45px;
+}
+body > div #second {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  animation: rotate 60s linear infinite;
+  display: flex;
+  justify-content: center;
+}
+body > div #second span {
+  background-color: rgba(255, 255, 255, 0.534);
+  height: 60%;
+  width: 5px;
+  display: block;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
