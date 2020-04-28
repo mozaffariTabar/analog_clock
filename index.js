@@ -10,19 +10,19 @@ function draw() {
     var hour = {
         elem: document.getElementById('hour'),
         number: date.getHours(),
-        deg: (360 / 12) * (date.getHours() > 12 ? date.getHours() - 12 : date.getHours())
+        deg: 30 * (date.getHours() > 12 ? date.getHours() - 12 : date.getHours())
     };
 
     var minute = {
         elem: document.getElementById('minute'),
         number: date.getMinutes(),
-        deg: (360 / 60) * date.getMinutes()
+        deg: 6 * date.getMinutes()
     };
 
     var second = {
         elem: document.getElementById('second'),
         number: date.getSeconds(),
-        deg: (360 / 60) * date.getSeconds()
+        deg: 6 * date.getSeconds()
     };
 
     hour.elem.style.transform = 'rotate(' + hour.deg + 'deg)';

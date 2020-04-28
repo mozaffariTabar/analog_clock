@@ -10,11 +10,11 @@ body {
         background: radial-gradient(#001a21, #001a21, #001a21, #000);
         width: 300px;
         height: 300px;
+        display: block;
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, 50%);
-        display: block;
         border: 10px solid rgb(194, 0, 0);
 
         >* {
@@ -83,7 +83,6 @@ body {
             height: 30px;
             background: rgb(255, 255, 255);
             box-shadow: 0 0 22px 15px rgba(0, 0, 0, 0.26);
-            display: block;
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -102,7 +101,6 @@ body {
                 background-color: red;
                 height: 30%;
                 width: 15px;
-                display: block;
                 border-radius: 10px;
                 margin-top: 65px;
             }
