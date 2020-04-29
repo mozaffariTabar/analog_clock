@@ -7,10 +7,10 @@ draw();
 function draw() {
     var date = new Date();
 
-    var hour = {
-        elem: document.getElementById('hour'),
-        number: date.getHours(),
-        deg: 30 * (date.getHours() > 12 ? date.getHours() - 12 : date.getHours())
+    var second = {
+        elem: document.getElementById('second'),
+        number: date.getSeconds(),
+        deg: 6 * date.getSeconds()
     };
 
     var minute = {
@@ -19,10 +19,10 @@ function draw() {
         deg: 6 * date.getMinutes()
     };
 
-    var second = {
-        elem: document.getElementById('second'),
-        number: date.getSeconds(),
-        deg: 6 * date.getSeconds()
+    var hour = {
+        elem: document.getElementById('hour'),
+        number: date.getHours(),
+        deg: 30 * (date.getHours() > 12 ? date.getHours() - 12 : date.getHours()) + minute.number * .5
     };
 
     hour.elem.style.transform = 'rotate(' + hour.deg + 'deg)';
